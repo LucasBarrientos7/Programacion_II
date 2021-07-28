@@ -1,0 +1,63 @@
+TAD CentroExpress:
+IREP: - La lista de pacientes es un hashMap para que su nombre y su numero de historia clinica esten encadenados 
+		como clave (nombre) o el valor (numero de historia clinica). Ademas a la hora de usar tanto put como containsKey
+		se realiza en O(1).
+	  - La lista de atenciones es un Linkedlist de Objetos tipo Atencion, el cual tiene como atributo un Estudio,
+		un paciente y una fecha. 
+	  - Al ingresar una nueva atencion no se puede dar una atencion a un estudio que no existe dentro de la lista de estudios.
+	  - Al consultar los estudios realizados o consultar el monto total de un paciente, éste debe existir dentro de la lista de pacientes.
+	  - El numero de historia clinica de un paciente es unico y no se repite.
+	  - El codigo de un estudio es unico y no se repite.
+	
+	Parametros:
+		- Lista de pacientes.
+		- Lista de Atenciones.
+		- Lista de Estudios.
+		
+	Acciones:
+		- ingresar los estudios(nombre, codigo, costo).
+		- ingresar una nueva atencion (nombre del paciente, nombre del estudio y fecha)
+		- Obtener todos los estudios realizados por un paciente determinado. Se desea conocer código de estudio y la fecha en que se atendió.
+		- Obtener lista de las atenciones dada una fecha, devuelve historia clinica del paciente y codigo del estudio
+		- Dar el monto total pagado de un paciente en todos sus estudios.
+
+TAD Paciente:
+
+	Parametros:
+		- Nombre del paciente.
+		- Numero de Historia Clinica
+	
+	Acciones:
+		- No hay acciones importantes que se puedan realizar.
+
+TAD Estudio:
+
+	Parametros:
+		- Nombre del Estudio.
+		- Codigo con el cual se identifica el Estudio.
+		- Costo del Estudio.
+	
+	Acciones:
+		- No hay acciones importantes que se puedan realizar.
+
+TAD Atencion:
+
+	Parametros:
+		- Estudio del paciente.
+		- Paciente del cual recibe la atencion.
+		- Fecha de la atencion
+	
+	Acciones:
+		- No hay acciones importantes que se puedan realizar.
+	
+INTERFAZ:
+
+TAD CentroExpress:
+
+	- void ingresarEstudio(String nombre, int codigo, int costo)
+	- void ingresarNuevaAtencion(String nombre, String nombreDelEstudio, Fecha fecha)
+	- HashMap obtenerEstudiosRealizadosPorElPaciente(Paciente paciente)
+	- HashMap listaDeAtenciones(Fecha fecha) {
+	- int montoTotalPagadoDelPaciente(Paciente paciente)
+	
+	
