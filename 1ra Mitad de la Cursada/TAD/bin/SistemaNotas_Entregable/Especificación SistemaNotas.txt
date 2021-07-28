@@ -1,0 +1,48 @@
+TAD SistemaDeNotas:
+IREP: nroLibreta es unico no se repite
+
+	Parametros:
+		Alumnos -> Diccionario(nroLibreta, Alumno)
+	
+	Acciones:
+		IngresarNuevoAlumno: nroLibreta, nombre y apellido
+		IngresarNotaAprobada: alumno. nombreMateria y nota
+		obtenerPromedio: nroLibreta
+		obtenerCantidadMateriasAprobadas: nroLibreta
+		private buscarAlumno: nroLibreta
+
+TAD Alumno:
+IREP: El nombre de la materia no se repite
+
+	Parametros:
+		Nro de Libreta
+		Nombre
+		Apellido
+		Materias aprobadas -> Diccionario(nombre, materia)
+	
+	Acciones:
+		ingresarNotaMateriaAprobada: nombreMateria y nota
+		obtenerPromedio
+		obtenerCantidadMateriasAprobadas
+
+TAD MateriaAprobada:
+IREP: nota entre 4 a 10
+
+	Parametros:
+		Nombre
+		Nota
+	
+	Acciones:
+		No hay acciones importantes que se puedan realizar
+
+
+DEFINICIONES:
+IREP: Las notas son de 0 a 10 y las aprobadas de 4 a 10.
+	
+INTERFAZ:
+	SistemaNotas();
+	void ingresarNuevoAlumno(int nroLibreta, String nombre, String apellido)
+	void ingresarNotaMateriaAprobada(int nroLibreta, String nombreMateria, double nota)
+	double obtenerPromedio(int nroLibreta)
+	int obtenerCantidadMateriasAprobadas(int nroLibreta)
+	
