@@ -1,0 +1,57 @@
+TAD AB (generico):
+Ab es una estructura de datos, todos del mismo tipo (t),
+formada por nodos con dos hijos y a la que se accede
+a traves de la raiz.
+
+Atributos:
+raiz del arbol: Nodo<T>
+
+Operaciones:
+agregar un dato (Tipo T) al AB
+si pertenece un dato tipo T al AB -> retorna V o F
+Eliminar un dato de tipo T de AB
+Altura del AB -> retorna un valor entero
+Cantidad de nodos -> retorna un valor entero
+Si el AB es balanceado -> retorna VoF
+
+
+IREP:
+Se pueden llegar a cualquier nodo desde la raiz.
+Cada nodo tiene un padre, salvo la raiz que no tiene padre.
+No tiene ciclos.
+
+
+Determino que la complejidad que se produce en el metodo "nodosConUnHijo"
+en el peor de los casos es O(n) debido que se debe posicionar a lo largo del arbol
+para determinar si un un nodo tiene un solo hijo o no tiene ninguno.
+
+
+
+
+
+
+
+
+
+
+
+
+devuelve 0 si el elemento
+introducido como parametro no se encontro en todo el recorrido del arbol y ademas
+devuelve 1 si el elemento ingresado como parametro es un
+
+
+
+
+	/*
+	 * a)La complejidad del metodo implementado en el peor de los casos es de O(n) 
+	 *   porque se podria dar el caso en el que el arbol este totalmente desbalanceado
+	 *   por ejemplo que todos sus nodos esten anidados a la izquierda, en ese caso la altura del arbol seria igual 
+	 *   a la cantidad de nodos(n), entonces el peor caso seria agregar un elemento que sea el menor de todo el arbol,
+	 *   por lo tanto se recorrerian todos los nodos para agregarlo, por eso la complejidad seria de orden lineal.
+	 *   
+	 * b)En el caso de estar balanceado un arbol, la cantidad de nodos que se recorrerian para saber, donde se va a insertar
+	 *   un elemento seria equivalente a la altura del arbol, que es equivalente al logaritmo de la cantidad de elementos del arbol
+	 *   por lo tanto el orden de complejidad para saber donde se agregaria un elemento es de O(log n) siendo n la 
+	 	 cantidad de elementos del arbol.    
+	 */
