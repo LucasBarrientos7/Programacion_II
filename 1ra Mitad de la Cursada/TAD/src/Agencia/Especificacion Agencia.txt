@@ -1,0 +1,43 @@
+TAD AGENCIA:
+IREP:
+
+	Parametros:
+	 - 
+	
+	Metodos:
+	 - Crear Agente
+	 - Nueva Ciudadania (pais, dni)
+	 - Cambiar de residencia(pais)
+	 - Permitir darse de baja
+	 - En que pais se encuentra el agente
+	
+	
+TAD AGENTE:
+IREP: el pais al que pertenece el aente debe pertenecer al conjunto de paises de la agencia
+	  El agente solo puede tener un solo dni por pais.
+
+	Parametros:
+	 - nombre
+	 - Edad
+	 - Ciudad de residencia actual
+	 - Diccionario de ciudadanias (pais, dni)
+	 
+	Metodos:
+	 - Darse de baja ()
+	 
+	 
+TAD Paises
+IREP:
+
+	Parametros:
+	 - Nombre
+	 - Conjunto de ciudades
+	
+	
+	
+	
+	
+	
+	
+	
+	
